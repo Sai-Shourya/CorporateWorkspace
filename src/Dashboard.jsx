@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
+import { motion } from "framer-motion";
 
 function Dashboard(){
     return(
@@ -7,7 +8,7 @@ function Dashboard(){
         <Navbar/>
         <div className="sidebar">
             
-         <div className="content">
+         <motion.div className="content" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}  exit={{ opacity: 0, y: -20 }} transition={{ duration: 1 }}>
           <div className="b1">
             <h1> Hey, Employee</h1>
             <p>Here's what's happening today.</p>
@@ -75,7 +76,7 @@ function Dashboard(){
                
             </div>
            </div>
-          </div>
+          </motion.div>
         </div>
         </>
 

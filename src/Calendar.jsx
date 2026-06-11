@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-
+import { motion } from "framer-motion";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -49,7 +49,7 @@ function Calendar(){
         <Navbar/>
         <div className="sidebar">
             
-         <div className="content">
+         <motion.div className="content" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}  exit={{ opacity: 0, y: -20 }} transition={{ duration: 1 }}>
           <div className="c1">
             <div className="c2">
                 <h1>Calendar</h1>
@@ -87,7 +87,7 @@ function Calendar(){
                 </div>
             </div>
            </div>
-          </div>
+          </motion.div>
         </div>
         </>
     );

@@ -1,6 +1,6 @@
-import { useState , useEffect} from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
-
+import { motion } from "framer-motion";
 
 
 function Todo(){
@@ -37,9 +37,9 @@ function Todo(){
     return(
         <>
         <Navbar/>
-        <div className="sidebar">
+        <motion.div className="sidebar" >
            
-          <div className="content">
+          <motion.div className="content" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}  exit={{ opacity: 0, y: -20 }} transition={{ duration: 1 }}>
             <div className="e2">
                 <h1>To Do list</h1>
                 <input type= "text" placeholder="Enter task" value={task} onChange={(e) => setTask(e.target.value)}></input>
@@ -59,9 +59,9 @@ function Todo(){
                 </div>
                     )}
             </div>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
         
         </>
     )

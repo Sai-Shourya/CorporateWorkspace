@@ -1,6 +1,6 @@
 body{
     margin:0;
-    /*background:darkgreen;*/
+    background:lightskyblue;
 }
 
 .d1{
@@ -8,10 +8,6 @@ body{
     background:darkblue;
     color:white;
     display:flex;
-    /*margin:2%;
-    margin-bottom: 0;
-    margin-left: 0.5%;
-    padding:0 2%;*/
     padding: 0 2%;
     justify-content:space-between;
     align-items:center;
@@ -36,15 +32,30 @@ body{
 
 .a1{
     display: flex;
+    flex-direction: column;
+    gap:2rem;
+    
     align-items: center;
     justify-content: center;
     margin:25%;
 }
 
-.button.a1{
-    margin-top: 20px;
-
+.a2{
+    font-weight: 800;
+    font-size: 2rem;
 }
+
+.c5,.e2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.e2{
+    gap: 2rem;
+}
+
 
 
 
